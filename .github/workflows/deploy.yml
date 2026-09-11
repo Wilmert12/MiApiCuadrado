@@ -17,9 +17,10 @@ jobs:
       with:
         dotnet-version: '10.0.x' # Ajusta la versión si tu proyecto usa otra
 
+  
     - name: Publish application
-      run: dotnet publish -c Release -o ./publish
-
+      run: dotnet publish MiApiCuadrado.csproj -c Release -o ./publish
+      
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
