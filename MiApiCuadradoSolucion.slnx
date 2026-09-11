@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MiApiCuadrado.csproj" />
+  <Project Path="MiApiCuadrado.Tests/MiApiCuadrado.Tests.csproj" />
+</Solution>
