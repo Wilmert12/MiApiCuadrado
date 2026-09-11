@@ -23,11 +23,11 @@ jobs:
         with:
           dotnet-version: '10.x'
 
-     - name: Build with dotnet
-  run: dotnet build MiApiCuadradoSolucion.slnx --configuration Release
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
 
-- name: dotnet publish
-  run: dotnet publish MiApiCuadradoSolucion.slnx -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ACDC3EFCE6E24D94A0A1D738D4E04871 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1834C8F4B2A3420C95212A3139873D09 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_12F0C0B870A84066A30F40196E8788C7 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3686859AFFC74F0398471FE948F53821 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5754FE7D74384F51AA6895D18F339443 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_284D5D80DB4F417CA31EBC204BF9D8B3 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
