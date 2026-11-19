@@ -19,7 +19,7 @@ namespace MiCuadrado.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            string connectionString = _configuration.GetConnectionString("SomeeDb")!;
+            string connectionString = _configuration.GetConnectionString("DefaultConnection")!;
 
             using (var connection = new SqlConnection(connectionString))
             {
